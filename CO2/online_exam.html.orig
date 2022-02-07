@@ -1,0 +1,152 @@
+<<<<<<< HEAD
+<html>
+    <head>
+        <title>Online Exam</title>
+    </head>
+    <body>
+        <form>
+            <table >
+            <h1 align="center">Exam<h1>
+            <tr>
+            <p id="q1"> 1. What is the full form of HTML?</p>
+            </tr>
+            <tr>
+            <input type="radio" id="a12" name="n1">Hyper Text Markup Language<br>
+            </tr>
+            <tr>
+            <input type="radio"  name="n1">Hyper Type Markup Language<br>
+            </tr>
+            <tr>
+            <input type="radio" name="n1">Hyper Text Main Language<br>
+            </tr>
+        
+
+            <tr>
+            <p id="q2"> 2. What is the full form of CSS?</p>
+            </tr>
+            <tr>
+            <input type="radio" id="a21" name="n2">Cascading Style Sheet<br>
+            </tr>
+            <tr>
+            <input type="radio" name="n2">Computer Style Sheet<br>
+            </tr>
+            <tr> 
+            <input type="radio" name="n2">Cascading  System Sheet<br>
+            </tr>
+
+            <tr>
+            <p id="q3"> 3. Which tag is responsible for making a break in a line ?</p>
+            </tr>
+            <tr> 
+            <input type="radio" id="a31" name="n3">br<br>
+            </tr>
+            <tr> 
+            <input type="radio" name="n3">p<br>
+            </tr>
+            <tr> 
+            <input type="radio" name="n3">ul<br>
+            </tr>
+            <tr> 
+            <br>
+            <input type="button" id="btn" value="Submit" onclick="func1()"><br>
+            <br>
+            
+
+            </table>
+        </form>
+        <script>
+            let num2=document.getElementById("a12").value;
+            let num3=document.getElementById("a21").value;
+            let num4=document.getElementById("a31").value;
+            score=0;
+            function func1(){
+                if(document.getElementById("a12").checked){
+                    score++;
+                }
+                if(document.getElementById("a21").checked){
+                    score++;
+                }
+                if(document.getElementById("a31").checked){
+                    score++;
+                }
+                alert("Score is "+score);
+            }
+        </script>
+    </body>
+=======
+<html>
+    <head>
+        <title>Online Exam</title>
+    </head>
+    <body>
+        <form>
+            <table >
+            <h1 align="center">Exam<h1>
+            <tr>
+            <p id="q1"> 1. What is the full form of HTML?</p>
+            </tr>
+            <tr>
+            <input type="radio" id="a12" name="n1">Hyper Text Markup Language<br>
+            </tr>
+            <tr>
+            <input type="radio"  name="n1">Hyper Type Markup Language<br>
+            </tr>
+            <tr>
+            <input type="radio" name="n1">Hyper Text Main Language<br>
+            </tr>
+        
+
+            <tr>
+            <p id="q2"> 2. What is the full form of CSS?</p>
+            </tr>
+            <tr>
+            <input type="radio" id="a21" name="n2">Cascading Style Sheet<br>
+            </tr>
+            <tr>
+            <input type="radio" name="n2">Computer Style Sheet<br>
+            </tr>
+            <tr> 
+            <input type="radio" name="n2">Cascading  System Sheet<br>
+            </tr>
+
+            <tr>
+            <p id="q3"> 3. Which tag is responsible for making a break in a line ?</p>
+            </tr>
+            <tr> 
+            <input type="radio" id="a31" name="n3">br<br>
+            </tr>
+            <tr> 
+            <input type="radio" name="n3">p<br>
+            </tr>
+            <tr> 
+            <input type="radio" name="n3">ul<br>
+            </tr>
+            <tr> 
+            <br>
+            <input type="button" id="btn" value="Submit" onclick="func1()"><br>
+            <br>
+            <input type="number" placeholder="Score" id="r1">
+
+            </table>
+        </form>
+        <script>
+            let num2=document.getElementById("a12").value;
+            let num3=document.getElementById("a21").value;
+            let num4=document.getElementById("a31").value;
+            score=0;
+            function func1(){
+                if(document.getElementById("a12").checked){
+                    score++;
+                }
+                if(document.getElementById("a21").checked){
+                    score++;
+                }
+                if(document.getElementById("a31").checked){
+                    score++;
+                }
+                document.getElementById("r1").value=score;
+            }
+        </script>
+    </body>
+>>>>>>> 0142a48ca8220f5a96d3dda352932c5c03b9d58f
+</html>

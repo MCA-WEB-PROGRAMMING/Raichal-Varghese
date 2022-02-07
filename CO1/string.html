@@ -1,0 +1,287 @@
+<html>
+    <head>
+        <title>String</title>
+    </head>
+    <body>
+        <form>
+            <table cellpadding="15" bgcolor="Lightblue">
+            <tr>
+            <td>
+            <h1 align="left"><b>String Operations</b></h1>
+            <table align="left" >
+                <tr>
+                    <td>Index of a Character</td>
+                    <td><input type="text" id="str1" placeholder="Enter string"></td>
+                    <td><input type="text" id="s" placeholder="Enter character to be searched"></td>
+                    <td><input type="number" id="r1" placeholder="Result"></td>
+                    <td><input type="button" onclick="index_pos()" value="index of"></td>
+                </tr>
+                <tr>
+                    <td>Length of a string</td>
+                    <td><input type="text" id="r2" placeholder="Result"></td>
+                    <td><input type="button" onclick="leng()" value="Length"></td>
+                </tr>
+                <tr>
+                    <td>Slice a string</td>
+                    <td><input type="number" id="n1" placeholder="Number 1"></td>
+                    <td><input type="number" id="n2" placeholder="Number 2"></td>
+                    <td><input type="text" id="r3" placeholder="result"></td>
+                    <td><input type="button" onclick="slice()" value="slice"></td>
+                </tr>
+                <tr>
+                    <td>Character at</td>
+                    <td><input type="number" id="chareq" placeholder="Characher at"></td>
+                    <td><input type="text" id="r4" placeholder="result"></td>
+                    <td><input type="button" onclick="charAt()" value="charAt"></td>
+                </tr>
+                <tr>
+                    <td>Replace a character</td>
+                    <td><input type="text" id="charp" placeholder="char to be replaced"></td>
+                    <td><input type="text" id="charpw" placeholder="char to be replaced with"></td>
+                    <td><input type="text" id="r5" placeholder="result"></td>
+                    <td><input type="button" onclick="replace()" value="Replace"></td>
+                </tr>
+                <tr>
+                    <td>Get substring </td>
+                    <td><input type="number" id="start" placeholder="start"></td>
+                    <td><input type="number" id="end" placeholder="end"></td>
+                    <td><input type="text" id="r6" placeholder="result"></td>
+                    <td><input type="button" onclick="substring()" value="substring"></td>
+                </tr>
+                <tr>
+                    <td>Get substr</td>
+                    <td><input type="number" id="st" placeholder="start"></td>
+                    <td><input type="number" id="ed" placeholder="end"></td>
+                    <td><input type="text" id="r7" placeholder="result"></td>
+                    <td><input type="button" onclick="substr()" value="substr"></td>
+                </tr>
+                <tr>
+                    <td>Upper</td>
+                    <td><input type="text" id="r8" placeholder="result"></td>
+                    <td><input type="button" onclick="upper()" value="Uppercase"></td>
+                </tr>
+                <tr>
+                    <td>lower</td>
+                    <td><input type="text" id="r9" placeholder="result"></td>
+                    <td><input type="button" onclick="lower()" value="lowercase"></td>
+                </tr>
+                <tr>
+                    <td>Character code</td>
+                    <td><input type="text" id="charpos" placeholder="Characher at"></td>
+                    <td><input type="text" id="r10" placeholder="result"></td>
+                    <td><input type="button" onclick="charcodeAt()" value="charCodeAt"></td>
+                </tr>
+                <tr>
+                    <td>Concat</td>
+                    <td><input type="text" id="n11" placeholder="Enter string to be added"></td>
+                    <td><input type="text" id="r11" placeholder="result"></td>
+                    <td><input type="button" onclick="concat()" value="concat"></td>
+                </tr>
+                <tr>
+                    <td>Split</td>
+                    <td><input type="text" id="s12" placeholder="Enter spliting character"></td>
+                    <td><input type="text" id="r12" placeholder="result"></td>
+                    <td><input type="button" onclick="split()" value="split"></td>
+                </tr>
+                <script>
+                    function index_pos(){
+                        str1=document.getElementById("str1").value;
+                        s=document.getElementById("s").value;
+                        ind=str1.indexOf(s);
+                        document.getElementById("r1").value=ind;
+                    }
+                    function leng(){
+                        str2=document.getElementById("str1").value;
+                        len=str2.length;
+                        document.getElementById("r2").value=len;
+                    }
+                    function slice(){
+                        str3=document.getElementById("str1").value;
+                        n1=document.getElementById("n1").value;
+                        n2=document.getElementById("n2").value;
+                        sl=str3.slice(n1,n2);
+                        document.getElementById("r3").value=sl;
+                    }
+                    function charAt(){
+                        str4=document.getElementById("str1").value;
+                        n1=document.getElementById("chareq").value;
+                        sl=str4.charAt(n1);
+                        document.getElementById("r4").value=sl;
+                    }
+                    function replace(){
+                        str5=document.getElementById("str1").value;
+                        n1=document.getElementById("charp").value;
+                        r1=document.getElementById("charpw").value;
+                        re=str5.replace(n1,r1);
+                        document.getElementById("r5").value=re;
+                    }
+                    function substring(){
+                        str6=document.getElementById("str1").value;
+                        start=document.getElementById("start").value;
+                        end=document.getElementById("end").value;
+                        re=str6.substring(start,end);
+                        document.getElementById("r6").value=re;
+                    }
+                    function substr(){
+                        str7=document.getElementById("str1").value;
+                        start=document.getElementById("st").value;
+                        end=document.getElementById("ed").value;
+                        re=str7.substr(start,end);
+                        document.getElementById("r7").value=re;
+                    }
+                    function upper(){
+                        str8=document.getElementById("str1").value;
+                        upp=str8.toUpperCase();
+                        document.getElementById("r8").value=upp;
+                    }
+                    function lower(){
+                        str9=document.getElementById("str1").value;
+                        low=str9.toLowerCase();
+                        document.getElementById("r9").value=low;
+                    }
+                    function charcodeAt(){
+                        str10=document.getElementById("str1").value;
+                        n1=document.getElementById("charpos").value;
+                        sl=str10.charCodeAt(n1);
+                        document.getElementById("r10").value=sl;
+                    }
+                    function concat(){
+                        str11=document.getElementById("str1").value;
+                        add=document.getElementById("n11").value;
+                        con=str11.concat(" ",add);
+                        document.getElementById("r11").value=con;
+                    }
+                    function split(){
+                        str12=document.getElementById("str1").value;
+                        s12=document.getElementById("s12").value;
+                        split=str12.split("a")
+                        document.getElementById("r12").value=split;
+                    }
+                </script>
+            </table>
+        </form>
+    </td>
+    <td>
+        <h1 align="right"><b>Math Operations</b></h1>
+        <p>
+            <input type="number" id="n21" placeholder="Enter a Number" >
+        </p>
+        <p>
+            <input type="number" id="r23" placeholder="Result">
+            <input type="button" onclick="round()" value="Round">
+        </p>
+        <p>
+            <input type="number" id="r22" placeholder="Ceil">
+            <input type="button" onclick="ceil()" value="Ceil">
+        </p>
+        <p>
+            <input type="number" id="r33" placeholder="Floor">
+            <input type="button" onclick="floor()" value="Floor">
+        </p>
+        <p>
+            <input type="number" id="r44" placeholder="Trunc">
+            <input type="button" onclick="trunc()" value="Trunc">
+        </p>
+        <p>
+            <input type="number" id="r55" placeholder="Sign">
+            <input type="button" onclick="sign()" value="sign">
+        </p>
+        <p>
+            <input type="number" id="r66" placeholder="Square root">
+            <input type="button" onclick="sqrt()" value="Sqrt">
+        </p>
+        <p>
+            <input type="number" id="p11" placeholder="Power">
+            <input type="number" id="r77" placeholder="Result">
+            <input type="button" onclick="power()" value="Power">
+        </p>
+        <p>
+            <input type="number" id="r88" placeholder="Absolute">
+            <input type="button" onclick="abs()" value="Absolute">
+        </p>
+        <p>
+            <input type="number" id="r111" placeholder="Log">
+            <input type="button" onclick="logg()" value="Log">
+        </p>
+        <p>
+            <input type="number" id="p22" placeholder="Number1">
+            <input type="number" id="p33" placeholder="Number2">
+            <input type="number" id="p44" placeholder="Number3">
+        </p>
+        <p>
+            <input type="number" id="r99" placeholder="Result">
+            <input type="button" onclick="maxx()" value="Maximum">
+        </p>
+        <p>
+            <input type="number" id="r100" placeholder="Result">
+            <input type="button" onclick="minn()" value="Minimum">
+        </p>
+        </div>
+        <script>
+            function round(){
+                num1=document.getElementById("n21").value;
+                r1=Math.round(num1);
+                document.getElementById("r23").value=r1;
+            }
+            function ceil(){
+                num1=document.getElementById("n21").value;
+                r2=Math.ceil(num1);
+                document.getElementById("r22").value=r2;
+            }
+            function floor(){
+                num1=document.getElementById("n21").value;
+                r3=Math.floor(num1);
+                document.getElementById("r33").value=r3;
+            }
+            function trunc(){
+                num1=document.getElementById("n21").value;
+                r4=Math.trunc(num1);
+                document.getElementById("r44").value=r4;
+            }
+            function sign(){
+                num1=document.getElementById("n21").value;
+                r5=Math.sign(num1);
+                document.getElementById("r55").value=r5;
+            }
+            function sqrt(){
+                num1=document.getElementById("n21").value;
+                r6=Math.sqrt(num1);
+                document.getElementById("r66").value=r6;
+            }
+            function power(){
+                num1=document.getElementById("n21").value;
+                p1=document.getElementById("p11").value;
+                r7=Math.pow(num1,p1);
+                document.getElementById("r77").value=r7;
+            }
+            function abs(){
+                num1=document.getElementById("n21").value;
+                r8=Math.abs(num1);
+                document.getElementById("r88").value=r8;
+            }
+            function maxx(){
+                p2=document.getElementById("p22").value;
+                p3=document.getElementById("p33").value;
+                p4=document.getElementById("p44").value;
+                r9=Math.max(p2,p3,p4);
+                document.getElementById("r99").value=r9;
+    
+            }
+            function minn(){
+                p2=document.getElementById("p22").value;
+                p3=document.getElementById("p33").value;
+                p4=document.getElementById("p44").value;
+                r10=Math.min(p2,p3,p4);
+                document.getElementById("r100").value=r10;
+            }
+            function logg(){
+                num1=document.getElementById("n21").value;
+                r11=Math.log(num1);
+                document.getElementById("r111").value=r11;
+            }
+            
+        </script>
+    </td>
+    </tr>
+    </body>
+</html>

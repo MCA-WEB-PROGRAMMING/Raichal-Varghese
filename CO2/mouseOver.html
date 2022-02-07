@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Mouse Over</title>
+</head>
+<style>
+    .content{
+        width:100%;
+        height:100%;
+    }
+    
+    .h1.h2{
+        text-align: center;
+        display: block;
+    }
+    .h2{
+        text-align: center;
+        display: none;
+    }
+</style>
+<body>
+   <div id="mydiv" class="content">
+        <img src="html.png" id="image">
+   </div> 
+   <div>
+       <h3 id="h1">HTML--Hyper Text MarkUp Language</h3>
+       <h3 id="h2">CSS--Cascading Style Sheet</h3>
+   </div>
+   <script>
+       document.getElementById("mydiv").addEventListener('mouseover',fun1);
+       document.getElementById("mydiv").addEventListener('mouseout',fun2);
+       function fun1(){
+           document.getElementById("image").src="css.png";
+           document.getElementById("h1").style.display='none';
+           document.getElementById("h2").style.display='block';        
+       }
+       function fun2(){
+           document.getElementById("image").src="html.png";
+           document.getElementById("h2").style.display='none';
+           document.getElementById("h1").style.display='block';   
+       }
+   </script>
+</body>
+</html>
+
+

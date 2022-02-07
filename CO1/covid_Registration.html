@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Covid Registration</title>
+        <style>
+            body{background-color: pink;background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');}
+            input[type=text],select{
+                border: 2px solid red;
+                border-radius: 5px;
+            }
+            input[type=number]{
+                border: 2px solid red;
+                border-radius: 5px;
+            }
+            textarea {
+                width: 100%;
+                height: 150px;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                border: 2px solid rgb(184, 33, 33);
+                border-radius: 4px;
+                background-color: #f8f8f8;
+                resize: none;
+            }
+        </style>
+    </head>
+
+    <body >
+        <h1 align="center" style="color:darkblue;">Covid Registration</h1>
+        <form name="myform">
+            <table cellpadding="25" class="content">
+                <tr>
+                    <td >
+                    Patient Name:
+                    </td>
+                    <td>
+                    <input type="text" id="name" name="name" autofocus></td>
+                </tr>
+                <tr>
+                    <td>
+                    Patient Id:</td>
+                    <td>
+                    <input type="number" id="id"></td>
+                </tr>
+                <tr>
+                    <td>
+                    Age</td>
+                    <td>
+                    <input type="number" id="age"></td>
+                </tr>
+                <tr>
+                    <td >
+                    Address</td><br>
+                    <td>
+                    <textarea placeholder="Must include PIN CODE" rows="4" id="address"></textarea>  </td>
+                </tr>
+                <tr>
+                    <td>
+                    Date of Admission:</td>
+                    <td>
+                    <input type="number"></td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        Doctors Name:
+                    </td>
+                    <td>
+                        <select name="qualification" id="qualification">
+                            <option>Dr. Anil</option>
+                            <option>Dr. Sharon</option>
+                            <option>Dr. Sreekumar</option>
+                            <option>Dr. kala</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Prescribed Medicine:
+                    </td>
+                    <td>
+                        <select name="qualification" id="qualification">
+                            <option>Dolo65</option>
+                            <option>Atrovastatin</option>
+                            <option>Paracetamol</option>
+                            <option>Lipikind</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td ></td>
+                    <td>
+                    <input type="reset" ></td>
+                    <td>
+                        <input type="submit" onclick="validate()"></td>
+            </table>
+        </form>
+        <script>
+            function validate(){
+                name=document.getElementById("name").value;
+                id=document.getElementById("id").value;
+                age=document.getElementById("age").value;
+                date_of_birth=document.getElementById("dob").value;
+                var ren=/[0-9!@#$%^&*]/
+                var re=/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+                if(name="" || name.length<3 ||name.length>15){
+                    alert("Enter a valid name");
+                    document.myform.name.focus();
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

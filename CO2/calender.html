@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calender</title>
+</head>
+<style>
+
+table {
+
+border-collapse: collapse;
+
+}
+
+
+td,
+
+th {
+
+border: 1px solid black;
+
+padding: 3px;
+
+text-align: center;
+
+}
+
+
+th {
+
+font-weight: bold;
+
+background-color: #e6e6e6;
+
+}
+.content{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+</style>
+<body>
+    <table>
+        <tr>
+            <td>
+                Year:<input type="number" id="year">
+            </td>
+        </tr>
+    </table>
+    <div id="button">
+        <input type="button" value="Get Calender" id="btn" onclick="create();"/>
+    </div>
+        <div class="content">
+            <div class="grid-items"id="0"></div>
+            <div class="grid-items"id="1"></div>
+            <div class="grid-items"id="2"></div>
+            <div class="grid-items"id="3"></div>
+            <div class="grid-items"id="4"></div>
+            <div class="grid-items"id="5"></div>
+            <div class="grid-items"id="6"></div>
+            <div class="grid-items"id="7"></div>
+            <div class="grid-items"id="8"></div>
+            <div class="grid-items"id="9"></div>
+            <div class="grid-items"id="10"></div>
+            <div class="grid-items"id="11"></div>
+            </div>
+        </table>
+    <script>
+        function create(){
+            let year=Number(document.getElementById("year").value);
+            const month=["January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"];
+            for(var m=0;m<12;++m){
+                let d=new Date(year,m);
+                let table ="<h3>"+ month[m]+"</h3>"+"<table><tr><th>SU </th><th>MON </th><th>TU </th><th>WED </th><th>THU </th><th>FRI </th><th>SA </th></tr><tr>"
+    
+            for(let i=0;i<d.getDay();i++){
+                table+="<td></td>";
+            }
+            while(d.getMonth()==m){
+                table+="<td>"+d.getDate()+"</td>";     
+                if(d.getDay()==6){
+                    table+="<tr></tr>";
+                }
+                d.setDate(d.getDate() + 1); 
+            }
+            if(d.getDay()!=0){
+                for(let i=d.getDay();i<=6;i++){            
+                    table+="<td></td>";
+                }
+            }
+            table +="</tr></table>";   
+            document.getElementById(m).innerHTML=table;
+        }
+        }
+        
+        
+    </script>
+</body>
+</html>

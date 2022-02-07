@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Function</title>
+</head>
+<body>
+    <h1>Math Operations</h1>
+    <div class="container" style="background-color: lightcoral; width:500px; margin:10px; padding-bottom:20px;">
+    <p>
+        <input type="number" id="n1" placeholder="Enter a Number" >
+    </p>
+    <p>
+        <input type="number" id="r1" placeholder="Result">
+        <input type="button" onclick="round()" value="Round">
+    </p>
+    <p>
+        <input type="number" id="r2" placeholder="Ceil">
+        <input type="button" onclick="ceil()" value="Ceil">
+    </p>
+    <p>
+        <input type="number" id="r3" placeholder="Floor">
+        <input type="button" onclick="floor()" value="Floor">
+    </p>
+    <p>
+        <input type="number" id="r4" placeholder="Trunc">
+        <input type="button" onclick="trunc()" value="Trunc">
+    </p>
+    <p>
+        <input type="number" id="r5" placeholder="Sign">
+        <input type="button" onclick="sign()" value="sign">
+    </p>
+    <p>
+        <input type="number" id="r6" placeholder="Square root">
+        <input type="button" onclick="sqrt()" value="Sqrt">
+    </p>
+    <p>
+        <input type="number" id="p1" placeholder="Power">
+        <input type="number" id="r7" placeholder="Result">
+        <input type="button" onclick="power()" value="Power">
+    </p>
+    <p>
+        <input type="number" id="r8" placeholder="Absolute">
+        <input type="button" onclick="abs()" value="Absolute">
+    </p>
+    <p>
+        <input type="number" id="r11" placeholder="Log">
+        <input type="button" onclick="logg()" value="Log">
+    </p>
+    <p>
+        <input type="number" id="p2" placeholder="Number1">
+        <input type="number" id="p3" placeholder="Number2">
+        <input type="number" id="p4" placeholder="Number3">
+    </p>
+    <p>
+        <input type="number" id="r9" placeholder="Result">
+        <input type="button" onclick="maxx()" value="Maximum">
+    </p>
+    <p>
+        <input type="number" id="r10" placeholder="Result">
+        <input type="button" onclick="minn()" value="Minimum">
+    </p>
+    </div>
+    <script>
+        function round(){
+            num1=document.getElementById("n1").value;
+            r1=Math.round(num1);
+            document.getElementById("r1").value=r1;
+        }
+        function ceil(){
+            num1=document.getElementById("n1").value;
+            r2=Math.ceil(num1);
+            document.getElementById("r2").value=r2;
+        }
+        function floor(){
+            num1=document.getElementById("n1").value;
+            r3=Math.floor(num1);
+            document.getElementById("r3").value=r3;
+        }
+        function trunc(){
+            num1=document.getElementById("n1").value;
+            r4=Math.trunc(num1);
+            document.getElementById("r4").value=r4;
+        }
+        function sign(){
+            num1=document.getElementById("n1").value;
+            r5=Math.sign(num1);
+            document.getElementById("r5").value=r5;
+        }
+        function sqrt(){
+            num1=document.getElementById("n1").value;
+            r6=Math.sqrt(num1);
+            document.getElementById("r6").value=r6;
+        }
+        function power(){
+            num1=document.getElementById("n1").value;
+            p1=document.getElementById("p1").value;
+            r7=Math.pow(num1,p1);
+            document.getElementById("r7").value=r7;
+        }
+        function abs(){
+            num1=document.getElementById("n1").value;
+            r8=Math.abs(num1);
+            document.getElementById("r8").value=r8;
+        }
+        function maxx(){
+            p2=document.getElementById("p2").value;
+            p3=document.getElementById("p3").value;
+            p4=document.getElementById("p4").value;
+            r9=Math.max(p2,p3,p4);
+            document.getElementById("r9").value=r9;
+
+        }
+        function minn(){
+            p2=document.getElementById("p2").value;
+            p3=document.getElementById("p3").value;
+            p4=document.getElementById("p4").value;
+            r10=Math.min(p2,p3,p4);
+            document.getElementById("r10").value=r10;
+        }
+        function logg(){
+            num1=document.getElementById("n1").value;
+            r11=Math.log(num1);
+            document.getElementById("r11").value=r11;
+        }
+        
+    </script>
+</body>
+</html>

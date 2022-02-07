@@ -1,0 +1,63 @@
+inline
+
+<html>
+    <head>
+        <title>Inline</title>
+    </head>
+    <body bgcolor="lightGrey">
+        <h1 style="color: blue;text-align: center;">This is the heading</h1>
+        <p style="color:red; font-size: larger;">This is a paragraph</p>
+    </body>
+</html> 
+
+
+internal
+
+<html>
+    <head>
+        <title>
+            Internal style
+        </title>
+        <style>
+            body{
+                background-color: cadetblue;
+            }
+            h1{
+                color: black;
+                margin: 50px;
+            }
+            p{
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 >This is the heading</h1>
+        <p>This is a paragraph</p>
+    </body>
+</html>
+
+
+external
+
+<html>
+    <head>
+        <title>External Style</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 >This is the heading</h1>
+        <p>This is a paragraph</p>
+    </body>
+</html>
+
+.css
+
+body{
+    background-color: aquamarine;
+    
+}
+h1{
+    color: blueviolet;
+    margin-left: 100px;
+}

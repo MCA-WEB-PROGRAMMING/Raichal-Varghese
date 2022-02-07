@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calendar</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                Year:<input type="number" id="year">
+            </td>
+            <td>
+                <input type="button" value="GET CALENDAR" id="btn"
+                onclick="create()">
+            </td>
+            <tr>
+                <td id="0"></td>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+            </tr>
+            <tr>
+                <td id="4"></td>
+                <td id="5"></td>
+                <td id="6"></td>
+                <td id="7"></td>
+            </tr>
+            <tr>
+                <td id="8"></td>
+                <td id="9"></td>
+                <td id="10"></td>
+                <td id="11"></td>
+            </tr>
+        </tr>
+    </table>
+    <script>
+        function create(){
+            let year=document.getElementById("year").value;
+            const month=[
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "NOvember",
+                    "December"
+            ];
+            for(var i=0;i<12;i++){
+                let d=new Date(year,i);
+                let table="<hw>"+month[i]+"</h3>"+"<table><tr><th>SU </th><th>MON </th><th>TU </th><th>WED </th><th>THU </th><th>FRI </th><th>SA </th></tr><tr>"
+            for()
+            
+            
+            
+            
+            
+            }
+        }
+    </script>
+</body>
+</html>

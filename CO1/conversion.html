@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>
+        Conversion
+    </title>
+</head>
+    <body>
+        dollar<input type="number" id="dollar"><br>
+        rupee<input type="number" id="rupee"><br>
+        <input type="button" onclick="convert()" value="convert">
+        <script>
+            function convert(){
+                var dollar = document.getElementById("dollar").value;
+                var rupee = dollar * 74;
+                document.getElementById("rupee").value = rupee;
+            }
+        </script>
+    </body>
+</html>

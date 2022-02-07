@@ -1,0 +1,218 @@
+<<<<<<< HEAD
+<html>
+    <head>
+        <title>Registration form</title>
+    </head>
+
+    <body bgcolor="LightBlue" >
+        <h1 align="center">Entry Form</h1>
+        <form name="myform" onsubmit="return(validate());">
+            <table>
+                <tr>
+                    <td></td>
+                    <td > Name:</td>
+                    <td><input type="text" autofocus required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td > Age:</td>
+                    <td>
+                    <input type="number"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td > Date of Birth</td><br>
+                    <td>
+                    <input type="date" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >Address</td><br>
+                    <td>
+                    <textarea placeholder="Must include PIN CODE" rows="4"></textarea>  </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >Nationality</td><br>
+                    <td>
+                    <input type="text" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Email</td>
+                    <td><input type="text" name="email" pattern="[a-zA-Z0-9]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}"></td>
+                  </tr>
+                <tr>
+                    <td></td>
+                    <td >Username</td><br>
+                    <td>
+                    <input type="text"  id="usr" placeholder="atleast 7 characters" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >Phone</td><br>
+                    <td>
+                    <input type="number" id="phn" placeholder="atleast 10 digits" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >Enter your Password</td><br>
+                    <td>
+                    <input type="password" id="pwd" placeholder="atleast 7 characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                    <input type="reset" ></td>
+                    <td></td>
+                    <td>
+                    <input type="submit" value="SUBMIT"></td>
+                </tr>
+
+            </table>
+        </form>
+        <script>
+            function validate(){
+                let x=document.getElementById("usr").value;
+                var z=document.getElementById("phn").value;
+                var y=document.getElementById("pwd").value;
+
+                if(x=="" || x.length<6 || x.length>15){
+                    alert("Enter the valid username");
+                    document.myform.usr.focus();
+                    return false;
+                }                
+                if(z=="" || z.length!=10 ){
+                    alert("Enter a valid phoneNumber");
+                    document.myform.phn.focus();
+                    return false;
+                }
+                if(y==""){
+                    alert("Enter the valid password");
+                    document.myform.pwd.focus();
+                    return false;
+                }
+                else if(y.length<6){
+                    alert("Weak password");
+                    document.myform.pwd.focus();
+                    return false;
+                }
+                else if(y.length>15){
+                    alert("Long password");
+                    document.myform.pwd.focus();
+                    return false;
+                }
+            return true; 
+            }
+        </script>
+    </body>
+=======
+<html>
+    <head>
+        <title>Registration form</title>
+    </head>
+
+    <body bgcolor="LightBlue" >
+        <h1 align="center">Entry Form</h1>
+        <form name="myform" onsubmit="return(validate());">
+            <table>
+                <tr>
+                    <td></td>
+                    <td > Name:</td>
+                    <td><input type="text" autofocus required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td > Age:</td>
+                    <td>
+                    <input type="number"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td > Date of Birth</td><br>
+                    <td>
+                    <input type="date" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >Address</td><br>
+                    <td>
+                    <textarea placeholder="Must include PIN CODE" rows="4"></textarea>  </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >Nationality</td><br>
+                    <td>
+                    <input type="text" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Email</td>
+                    <td><input type="text" name="email" pattern="[a-zA-Z0-9]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}"></td>
+                  </tr>
+                <tr>
+                    <td></td>
+                    <td >Username</td><br>
+                    <td>
+                    <input type="text"  id="usr" placeholder="atleast 7 characters" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >Phone</td><br>
+                    <td>
+                    <input type="number" id="phn" placeholder="atleast 10 digits" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td >Enter your Password</td><br>
+                    <td>
+                    <input type="password" id="pwd" placeholder="atleast 7 characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                    <input type="reset" ></td>
+                    <td></td>
+                    <td>
+                    <input type="submit" value="SUBMIT"></td>
+                </tr>
+
+            </table>
+        </form>
+        <script>
+            function validate(){
+                let x=document.getElementById("usr").value;
+                var z=document.getElementById("phn").value;
+                var y=document.getElementById("pwd").value;
+
+                if(x=="" || x.length<6 || x.length>15){
+                    alert("Enter the valid username");
+                    document.myform.usr.focus();
+                    return false;
+                }                
+                if(z=="" || z.length!=10 ){
+                    alert("Enter a valid phoneNumber");
+                    document.myform.phn.focus();
+                    return false;
+                }
+                if(y==""){
+                    alert("Enter the valid password");
+                    document.myform.pwd.focus();
+                    return false;
+                }
+                else if(y.length<6){
+                    alert("Weak password");
+                    document.myform.pwd.focus();
+                    return false;
+                }
+                else if(y.length>15){
+                    alert("Long password");
+                    document.myform.pwd.focus();
+                    return false;
+                }
+            return true; 
+            }
+        </script>
+    </body>
+>>>>>>> 0142a48ca8220f5a96d3dda352932c5c03b9d58f
+</html>
