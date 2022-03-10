@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Mouse Over</title>
+</head>
+<body bgcolor="LightBlue">
+    <center>
+    <h2><u>Mouse Over</u></h2>
+    <div id="mydiv">
+        <img src="first.jfif" width=20% id="image">
+    </div>
+    <div>
+        <h3 id="h1"><i>------- First Image ------</i></h3>
+        <h3 id="h2"><i>. . . . . . . Second Image . . . . . . . </i></h3>
+    </div>
+    </center>
+    <script>
+        document.getElementById("mydiv").addEventListener('mouseover',fun1);
+        document.getElementById("mydiv").addEventListener('mouseout',fun2);
+        function fun1(){
+            document.getElementById("image").src="second.jfif";
+            document.getElementById("h1").style.display='none';
+            document.getElementById("h2").style.display='block';
+        }
+        function fun2(){
+            document.getElementById("image").src="first.jfif";
+            document.getElementById("h2").style.display='none';
+            document.getElementById("h1").style.display='block';
+        }
+    </script>
+</body>
+</html>
